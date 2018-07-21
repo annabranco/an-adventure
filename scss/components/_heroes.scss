@@ -1,0 +1,17 @@
+.hero {
+  position                  : absolute;
+  height                    : 48px;
+  width                     : 48px;
+  // height                    : $heroSize;
+  // width                     : $heroSize;
+
+  background-image          : url('../images/heroes01.png');
+  background-position       : top right -48px;
+  // background-position       : top right -$heroSize;
+
+  // background-size           : 1150%;
+  transition-property       : top, left;
+  transition-duration       : 0.8s;
+  transition-timing-function: ease;
+  transform                 : scale(1);
+}

@@ -1,0 +1,12 @@
+.dungeon {
+  background      : gray;
+  height          : 100vh;
+  width           : 100vw;
+  border          : 5px solid #353b48;
+  box-sizing      : border-box;
+  background-image: -webkit-linear-gradient(rgba(189, 195, 199, 0.5), rgba(1, 2, 43, 0.5)), url('../images/BGdungeon.jpg');
+  background-image: -o-linear-gradient(rgba(189, 195, 199, 0.5), rgba(1, 2, 43, 0.5)), url('../images/BGdungeon.jpg');
+  background-image: linear-gradient(rgba(189, 195, 199, 0.5), rgba(1, 2, 43, 0.5)), url('../images/BGdungeon.jpg');
+  background-size : 240px;
+  background-clip : border-box;
+}

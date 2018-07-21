@@ -1,13 +1,20 @@
 {
 	"scss": {
-		"src": "scss/**/*.scss",
-		"dest": "css/"
+		"src": [
+			"scss/**/*.scss",
+			"scss/**/**/*.scss"
+		],
+		"dest": "styles/"
 	},
 	"js": {
 		"src": [
-			"js/main.js"
+			"scripts/main.js",
+			"scripts/heroes/icons.js",
+			"scripts/heroes/movement.js",
+			"scripts/maps/borders.js",
+			"scripts/maps/objects.js"
 		],
-		"dest": "js/"
+		"dest": "scripts/"
 	},
 	"images": "images/**/*.{gif,jpg,png,svg}",
 	"html": [

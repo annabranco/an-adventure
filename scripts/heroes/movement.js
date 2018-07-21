@@ -1,6 +1,4 @@
 'use strict';
-
-'use strict';
 /* global dungeon limitRight:true limitBottom:true */
 
 let moveIconDown;
@@ -155,22 +153,3 @@ const keys = event => {
 
 // EventListener para captar las teclas
 window.addEventListener('keydown', keys);
-
-// Icons
-
-// let heroSize = window.innerHeight * 0.1;
-
-'use strict';
-
-
-const dungeon = document.querySelector(".dungeon");
-
-
-let limitRight = dungeon.offsetWidth;
-let limitBottom = dungeon.offsetHeight;
-
-console.log("Playable area: " + limitRight + " x " + limitBottom);
-
-// objects
-
-//# sourceMappingURL=main.min.js.map

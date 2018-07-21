@@ -1,8 +1,70 @@
-@import 'core/reset';
-@import 'core/variables';
-@import 'components/header';
-@import 'components/footer';
-@import 'layout/main';
-@import 'core/helpers';
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}/* HTML5 display-role reset for older browsers */article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+body {
+  line-height: 0;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+blockquote,q {
+  quotes: none;
+}
+
+blockquote:after,blockquote:before,q:after,q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.nothing {
+  color: blue;
+}
+
+.hero {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  background-image: url("../images/heroes01.png");
+  background-position: top right -48px;
+  -webkit-transition-property: top, left;
+  transition-property: top, left;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.dungeon {
+  background: gray;
+  height: 100vh;
+  width: 100vw;
+  border: 5px solid #353b48;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(189, 195, 199, 0.5)), to(rgba(1, 2, 43, 0.5))), url("../images/BGdungeon.jpg");
+  background-image: linear-gradient(rgba(189, 195, 199, 0.5), rgba(1, 2, 43, 0.5)), url("../images/BGdungeon.jpg");
+  background-size: 240px;
+  background-clip: border-box;
+}
 
 /*# sourceMappingURL=main.css.map */
