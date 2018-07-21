@@ -39,6 +39,7 @@ table {
 }
 
 .hero {
+  z-index: 2;
   position: absolute;
   height: 48px;
   width: 48px;
@@ -54,6 +55,65 @@ table {
   transform: scale(1);
 }
 
+.button__move {
+  z-index: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #626871;
+  background-image: radial-gradient(rgba(214, 219, 223, 0.6), rgba(69, 102, 125, 0.6));
+  background-color: gray;
+  height: 35px;
+  width: 35px;
+  -webkit-box-shadow: 0 0 4px 3px rgba(97, 69, 111, 0.3);
+  box-shadow: 0 0 4px 3px rgba(97, 69, 111, 0.3);
+}
+
+.arrow--move {
+  font-size: 30px;
+  color: #413d46;
+}
+
+.arrow--move.move-active {
+  color: #6f492a;
+  text-shadow: 1px 1px 1px;
+}
+
+.move--up {
+  top: 0;
+  right: 50%;
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+}
+
+.move--right {
+  bottom: 50%;
+  right: 0;
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.move--down {
+  bottom: 0;
+  right: 50%;
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+}
+
+.move--left {
+  bottom: 50%;
+  left: 0;
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
 .dungeon {
   background: gray;
   height: 100vh;
@@ -65,6 +125,12 @@ table {
   background-image: linear-gradient(rgba(189, 195, 199, 0.5), rgba(1, 2, 43, 0.5)), url("../images/BGdungeon.jpg");
   background-size: 240px;
   background-clip: border-box;
+}
+
+@media all and (min-width: 800px) {
+  .move--bar {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

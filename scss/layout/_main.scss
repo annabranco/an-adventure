@@ -1,1 +1,56 @@
-$colorBlue: red;
+.move--bar {
+
+  @media all and (min-width: 800px) {
+    display: none;
+  }
+}
+
+.button__move {
+  z-index         : 0;
+  position        : fixed;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  border          : 1px solid rgb(98, 104, 113);
+  background-image: radial-gradient(rgba(214, 219, 223,0.6),rgba(69, 102, 125,0.6));
+  background-color: gray;
+  height          : 35px;
+  width           : 35px;
+  box-shadow      : 0 0 4px 3px rgba(97, 69, 111,0.3);
+}
+
+.arrow--move {
+  font-size: 30px;
+  color    : #413d46;
+
+  &.move-active {
+    color      : #6f492a;
+    text-shadow: 1px 1px 1px;
+
+  }
+}
+
+.move--up {
+  top      : 0;
+  right    : 50%;
+  transform: translate(50%, 0);
+}
+
+.move--right {
+  bottom   : 50%;
+  right    : 0;
+  transform: translate(0,50%);
+
+}
+
+.move--down {
+  bottom   : 0;
+  right    : 50%;
+  transform: translate(50%, 0);
+}
+
+.move--left {
+  bottom   : 50%;
+  left     : 0;
+  transform: translate(0,50%);
+}

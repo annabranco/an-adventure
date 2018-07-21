@@ -162,3 +162,29 @@ const keys = event => {
 
 // EventListener para captar las teclas
 window.addEventListener('keydown', keys);
+
+
+const moveButtons = document.querySelectorAll('.button__move');
+
+const moveByConsole = event => {
+  const buttonClicked = event.currentTarget;
+
+  buttonClicked.firstChild.classList.add('move-active');
+  setTimeout(function() {
+    buttonClicked.firstChild.classList.remove('move-active');
+  }, 500);
+
+  if (buttonClicked.classList.contains('move--up')) {
+    heroMoveUp();
+  } else if (buttonClicked.classList.contains('move--down')) {
+    heroMoveDown();
+  } else if (buttonClicked.classList.contains('move--left')) {
+    heroMoveLeft();
+  } else if (buttonClicked.classList.contains('move--right')) {
+    heroMoveRight();
+  }
+};
+
+moveButtons.forEach(moveButton => {
+  moveButton.addEventListener('click', moveByConsole);
+});
