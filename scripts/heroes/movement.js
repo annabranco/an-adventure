@@ -49,12 +49,18 @@ const faceLeft = ['top 144px right', 'top 144px right -96px', 'top 144px right -
 
 // ---- MOVIMIENTOS
 const heroMoveUp = () => {
+  // currentPositionX = hero.offsetLeft;
   currentPositionY = hero.offsetTop;
-  if (currentPositionY === 5) {
+  if (currentPositionY <= heroStepSize) {
     return;
   } else {
     hero.style.top = currentPositionY - heroStepSize + 'px';
     hero.style.backgroundPosition = faceUp;
+
+    setTimeout(function() {
+      currentPositionY = hero.offsetTop;
+      console.log('x: ' + currentPositionX + ', y: ' + currentPositionY);
+    }, 600);
 
     if (moveIconUp === -1) {
       moveIconUp = 1;
@@ -63,19 +69,23 @@ const heroMoveUp = () => {
       hero.style.backgroundPosition = faceUp[2];
     }, 300);
     hero.style.backgroundPosition = faceUp[moveIconUp];
-    currentPositionY = hero.offsetTop;
-    console.log('x: ' + currentPositionX + ', y: ' + currentPositionY);
     moveIconUp -= 1;
   }
 };
 
 const heroMoveDown = () => {
-  var limitBottom = dungeon.offsetHeight;
+  limitBottom = (dungeon.offsetHeight - heroStepSize - 48);
+  // currentPositionX = hero.offsetLeft;
   currentPositionY = hero.offsetTop;
-  if (currentPositionY >= limitBottom - 100) { // no entiendo porqué -50, pero fue lo que funcionó para limitar el movimiento para bajo
+  if (currentPositionY >= limitBottom) {
     return;
   } else {
     hero.style.top = currentPositionY + heroStepSize + 'px';
+    setTimeout(function() {
+      currentPositionY = hero.offsetTop;
+      console.log('x: ' + currentPositionX + ', y: ' + currentPositionY);
+
+    }, 600);
 
     if (moveIconDown === -1) {
       moveIconDown = 1;
@@ -84,16 +94,15 @@ const heroMoveDown = () => {
       hero.style.backgroundPosition = faceDown[2];
     }, 300);
     hero.style.backgroundPosition = faceDown[moveIconDown];
-    currentPositionY = hero.offsetTop;
-    console.log('x: ' + currentPositionX + ', y: ' + currentPositionY);
     moveIconDown -= 1;
   }
 };
 
 const heroMoveRight = () => {
-  limitRight = dungeon.offsetWidth;
+  limitRight = (dungeon.offsetWidth - heroStepSize - 48);
   currentPositionX = hero.offsetLeft;
-  if (currentPositionX >= limitRight - 100) { // también no entiendo porqué -60, pero fue lo que funcionó
+  // currentPositionY = hero.offsetTop;
+  if (currentPositionX >= limitRight) {
     return;
   } else {
     hero.style.left = currentPositionX + heroStepSize + 'px';
@@ -114,7 +123,8 @@ const heroMoveRight = () => {
 
 const heroMoveLeft = () => {
   currentPositionX = hero.offsetLeft;
-  if (currentPositionX === 5) {
+  // currentPositionY = hero.offsetTop;
+  if (currentPositionX <= heroStepSize) {
     return;
   } else {
     hero.style.left = currentPositionX - heroStepSize + 'px';
