@@ -1,5 +1,5 @@
 'use strict';
-/* global dungeon limitRight:true limitBottom:true */
+/* global dungeon limitRight:true limitBottom:true objectives checkObjectives */
 
 let moveIconDown;
 let moveIconUp;
@@ -7,6 +7,7 @@ let moveIconRight;
 let moveIconLeft;
 let currentPositionX;
 let currentPositionY;
+const audioSteps = new Audio('../audio/steps-stone.mp3');
 let heroStepSize = 48 + (window.innerHeight * 0.1);
 
 const hero = document.querySelector('.hero');
@@ -54,6 +55,8 @@ const heroMoveUp = () => {
   if (currentPositionY <= heroStepSize) {
     return;
   } else {
+    audioSteps.currentTime = 0;
+    audioSteps.play();
     hero.style.top = currentPositionY - heroStepSize + 'px';
     hero.style.backgroundPosition = faceUp;
 
@@ -74,12 +77,16 @@ const heroMoveUp = () => {
 };
 
 const heroMoveDown = () => {
+  checkObjectives();
   limitBottom = (dungeon.offsetHeight - heroStepSize - 48);
   // currentPositionX = hero.offsetLeft;
   currentPositionY = hero.offsetTop;
   if (currentPositionY >= limitBottom) {
+    objectives['Reach bottom edge'] = 'YES';
     return;
   } else {
+    audioSteps.currentTime = 0;
+    audioSteps.play();
     hero.style.top = currentPositionY + heroStepSize + 'px';
     setTimeout(function() {
       currentPositionY = hero.offsetTop;
@@ -99,12 +106,16 @@ const heroMoveDown = () => {
 };
 
 const heroMoveRight = () => {
+  checkObjectives();
   limitRight = (dungeon.offsetWidth - heroStepSize - 48);
   currentPositionX = hero.offsetLeft;
   // currentPositionY = hero.offsetTop;
   if (currentPositionX >= limitRight) {
+    objectives['Reach right edge'] = 'YES';
     return;
   } else {
+    audioSteps.currentTime = 0;
+    audioSteps.play();
     hero.style.left = currentPositionX + heroStepSize + 'px';
     hero.style.backgroundPosition = faceRight;
 
@@ -127,6 +138,8 @@ const heroMoveLeft = () => {
   if (currentPositionX <= heroStepSize) {
     return;
   } else {
+    audioSteps.currentTime = 0;
+    audioSteps.play();
     hero.style.left = currentPositionX - heroStepSize + 'px';
     hero.style.backgroundPosition = faceLeft;
 
