@@ -7,7 +7,7 @@ let moveIconRight;
 let moveIconLeft;
 let currentPositionX;
 let currentPositionY;
-let heroStepSize;
+let heroStepSize = 48 + (window.innerHeight * 0.1);
 
 const hero = document.querySelector('.hero');
 
@@ -15,7 +15,6 @@ const hero = document.querySelector('.hero');
 
 if (window.innerHeight * 0.1 > 48) {
   hero.style.transform = `scale(${1 + (window.innerHeight * 0.001)}`;
-  heroStepSize = 48 + (window.innerHeight * 0.005);
 }
 
 // if (window.innerHeight * 0.1 <= 48) {
@@ -54,7 +53,7 @@ const heroMoveUp = () => {
   if (currentPositionY === 5) {
     return;
   } else {
-    hero.style.top = currentPositionY - 48 + 'px';
+    hero.style.top = currentPositionY - heroStepSize + 'px';
     hero.style.backgroundPosition = faceUp;
 
     if (moveIconUp === -1) {
@@ -76,7 +75,7 @@ const heroMoveDown = () => {
   if (currentPositionY >= limitBottom - 100) { // no entiendo porqué -50, pero fue lo que funcionó para limitar el movimiento para bajo
     return;
   } else {
-    hero.style.top = currentPositionY + 48 + 'px';
+    hero.style.top = currentPositionY + heroStepSize + 'px';
 
     if (moveIconDown === -1) {
       moveIconDown = 1;
@@ -97,7 +96,7 @@ const heroMoveRight = () => {
   if (currentPositionX >= limitRight - 100) { // también no entiendo porqué -60, pero fue lo que funcionó
     return;
   } else {
-    hero.style.left = currentPositionX + 48 + 'px';
+    hero.style.left = currentPositionX + heroStepSize + 'px';
     hero.style.backgroundPosition = faceRight;
 
     if (moveIconRight === -1) {
@@ -118,7 +117,7 @@ const heroMoveLeft = () => {
   if (currentPositionX === 5) {
     return;
   } else {
-    hero.style.left = currentPositionX - 48 + 'px';
+    hero.style.left = currentPositionX - heroStepSize + 'px';
     hero.style.backgroundPosition = faceLeft;
 
     if (moveIconLeft === -1) {
