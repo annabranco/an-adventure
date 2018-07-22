@@ -85,7 +85,7 @@ const victory = () => {
 
   const victoryImg = document.createElement('img');
   victoryImg.classList.add('victory--img');
-  victoryImg.src = '../images/victory1.png';
+  victoryImg.src = 'images/victory1.png';
   victoryBox.append(victoryImg);
 
   const victoryObjectivesList = document.createElement('ul');
