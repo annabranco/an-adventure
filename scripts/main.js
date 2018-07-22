@@ -1,8 +1,8 @@
 'use strict';
 
 
-const audioCheck = new Audio('../audio/check.mp3');
-const audiovictoryMusic = new Audio('../audio/victoryMusic.mp3');
+const audioCheck = new Audio('audio/check.mp3');
+const audiovictoryMusic = new Audio('audio/victoryMusic.mp3');
 
 
 let objectives = {

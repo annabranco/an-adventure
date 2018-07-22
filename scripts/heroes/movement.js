@@ -7,7 +7,7 @@ let moveIconRight;
 let moveIconLeft;
 let currentPositionX;
 let currentPositionY;
-const audioSteps = new Audio('../audio/steps-stone.mp3');
+const audioSteps = new Audio('audio/steps-stone.mp3');
 let heroStepSize = 48 + (window.innerHeight * 0.1);
 
 const hero = document.querySelector('.hero');
