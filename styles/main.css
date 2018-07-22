@@ -189,7 +189,7 @@ table {
   height: 60vh;
   width: 90vw;
   max-width: 800px;
-  padding: 20px;
+  padding: 10px 20px;
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -204,12 +204,12 @@ table {
 }
 
 .victory--text {
-  margin: 20px 0;
+  margin: 5px 0;
   font-family: 'Merienda', cursive;
   font-size: 1rem;
   font-weight: normal;
   text-align: justify;
-  line-height: 2;
+  line-height: 1.5;
   color: black;
 }
 
@@ -243,7 +243,7 @@ table {
 
 .victory--button {
   position: absolute;
-  bottom: 28%;
+  bottom: 32%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
@@ -316,12 +316,18 @@ table {
     font-size: 1.1rem;
   }
 
+  .victory--box {
+    padding: 20px;
+  }
+
   .victory--title {
     font-size: 3rem;
   }
 
   .victory--text {
+    margin: 20px 0;
     font-size: 1.2rem;
+    line-height: 2;
   }
 
   .victory--list {
