@@ -133,6 +133,6 @@ const victory = () => {
 };
 
 
-// setTimeout(function() {
-//   document.querySelector('.instructions').remove();
-// }, 10000);
+setTimeout(function() {
+  document.querySelector('.instructions').remove();
+}, 12000);
