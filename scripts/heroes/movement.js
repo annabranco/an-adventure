@@ -77,12 +77,12 @@ const heroMoveUp = () => {
 };
 
 const heroMoveDown = () => {
-  checkObjectives();
   limitBottom = (dungeon.offsetHeight - heroStepSize - 48);
   // currentPositionX = hero.offsetLeft;
   currentPositionY = hero.offsetTop;
   if (currentPositionY >= limitBottom) {
     objectives['Reach bottom edge'] = 'YES';
+    checkObjectives();
     return;
   } else {
     audioSteps.currentTime = 0;
@@ -106,12 +106,12 @@ const heroMoveDown = () => {
 };
 
 const heroMoveRight = () => {
-  checkObjectives();
   limitRight = (dungeon.offsetWidth - heroStepSize - 48);
   currentPositionX = hero.offsetLeft;
   // currentPositionY = hero.offsetTop;
   if (currentPositionX >= limitRight) {
     objectives['Reach right edge'] = 'YES';
+    checkObjectives();
     return;
   } else {
     audioSteps.currentTime = 0;
