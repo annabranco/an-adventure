@@ -79,10 +79,23 @@ table {
 }
 
 .instructions-p {
-  margin: 20px 0;
+  margin: 15px 0;
   text-align: center;
   font-size: 0.9rem;
   line-height: 2;
+}
+
+.instructions-desktop {
+  display: none;
+}
+
+.instructions-devices {
+  display: block;
+}
+
+.instructions-all {
+  margin: -15px 0;
+  display: none;
 }
 
 .button__move {
@@ -349,7 +362,25 @@ table {
   }
 }
 
+@media all and (min-width: 768px) {
+  .instructions-desktop {
+    display: block;
+  }
+
+  .instructions-all {
+    display: block;
+  }
+}
+
 @media all and (min-width: 800px) {
+  .instructions-devices {
+    display: none;
+  }
+
+  .instructions-all {
+    display: none;
+  }
+
   .move--bar {
     display: none;
   }

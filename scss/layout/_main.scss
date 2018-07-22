@@ -18,12 +18,37 @@
 }
 
 .instructions-p {
-  margin     : 20px 0;
+  margin     : 15px 0;
   text-align : center;
   font-size  : 0.9rem;
   line-height: 2;
   @media all and (min-width: 500px) {
     font-size: 1.1rem;
+  }
+}
+
+.instructions-desktop {
+  display: none;
+  @media all and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.instructions-devices {
+  display: block;
+  @media all and (min-width: 800px) {
+    display: none;
+  }
+}
+
+.instructions-all {
+  margin : -15px 0;
+  display: none;
+  @media all and (min-width: 768px) {
+    display: block;
+  }
+  @media all and (min-width: 800px) {
+    display: none;
   }
 }
 
