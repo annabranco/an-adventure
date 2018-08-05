@@ -19,7 +19,7 @@ When I feel my skills are more consolidated I intend to build my own assets. For
 This development is happening reeeally slowly, as I am involved in several other projects and focusing on other studies really hard to improve my Front End Skills. Thus, I can only invest some time here when all my other taks are completed.
 But if you want to be notified about future updates, you may follow my on Twitter.
 I post just a few tweets in a week, but if you get bored, don't you worry, just unfollow me and there was no harm done. And yeah, we are still friends! ☺️
-@AnyaBranco(https://twitter.com/AnyaBranco)
+[@AnyaBranco](https://twitter.com/AnyaBranco)
 
 
 ## Want to help it?
