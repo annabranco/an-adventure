@@ -38,14 +38,9 @@ currentPositionX = currentPositionY = 5;
 
 // Imágenes para dar movimiento al personaje
 const faceDown = ['top right', 'top right -96px', 'top right -48px'];
-const faceUp = ['top 48px right', 'top 48px right -96px', 'top 48px right -48px'];
-const faceRight = ['top 96px right', 'top 96px right -96px', 'top 96px right -48px'];
-const faceLeft = ['top 144px right', 'top 144px right -96px', 'top 144px right -48px'];
-
-// const faceDown = [`top right `, `top right - $ {2 * heroSize}px `, `top right - $ {  heroSize}px `];
-// const faceUp = [`top $ {  heroSize}px right `, `top $ {  heroSize}px right - $ {  2 * heroSize}px `, `top $ {  heroSize}px right - $ {  heroSize}px `];
-// const faceRight = [`top $ {  2 * heroSize}px right `, `top $ {  2 * heroSize}px right -$ {  2 * heroSize}px `, `top $ {  2 * heroSize}px right - $ {  heroSize}px `];
-// const faceLeft = [`top $ {  3 * heroSize}px right `, `top $ {  3 * heroSize}px right -${  2 * heroSize}px `, `top $ {  3 * heroSize}px right - $ {  heroSize}px `];
+const faceUp = ['bottom 192px right', 'bottom 192px right -96px', 'bottom 192px right -48px'];
+const faceRight = ['bottom 144px right', 'bottom 144px right -96px', 'bottom 144px right -48px'];
+const faceLeft = ['bottom 96px right 2px', 'bottom 96px right -96px', 'bottom 96px right -46px'];
 
 
 // ---- MOVIMIENTOS
